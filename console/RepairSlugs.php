@@ -1,4 +1,4 @@
-<?php namespace Dmdev\FixTailorImport\Console;
+<?php namespace DMdev\FixTailorImport\Console;
 
 use DB;
 use Log;
@@ -6,7 +6,7 @@ use Str;
 use Illuminate\Console\Command;
 use Tailor\Classes\BlueprintIndexer;
 use Tailor\Classes\Blueprint\EntryBlueprint;
-use Dmdev\FixTailorImport\Services\SlugFixer;
+use DMdev\FixTailorImport\Services\SlugFixer;
 use Exception;
 
 /**

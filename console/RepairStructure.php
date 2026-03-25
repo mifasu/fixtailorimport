@@ -1,7 +1,7 @@
-<?php namespace Dmdev\FixTailorImport\Console;
+<?php namespace DMdev\FixTailorImport\Console;
 
 use Illuminate\Console\Command;
-use Dmdev\FixTailorImport\Services\StructurePostProcessor;
+use DMdev\FixTailorImport\Services\StructurePostProcessor;
 use Exception;
 
 /**

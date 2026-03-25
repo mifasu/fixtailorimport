@@ -5,7 +5,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Dmdev",
+            "name": "DMdev",
             "email": "dm@dmdev.ru",
             "homepage": "https://dmdev.ru"
         }
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dmdev\\FixTailorImport\\": ""
+            "DMdev\\FixTailorImport\\": ""
         }
     },
     "extra": {

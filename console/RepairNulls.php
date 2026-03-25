@@ -1,12 +1,12 @@
-<?php namespace Dmdev\FixTailorImport\Console;
+<?php namespace DMdev\FixTailorImport\Console;
 
 use DB;
 use Log;
 use Illuminate\Console\Command;
 use Tailor\Classes\BlueprintIndexer;
 use Tailor\Classes\Blueprint\StructureBlueprint;
-use Dmdev\FixTailorImport\Services\SlugFixer;
-use Dmdev\FixTailorImport\Services\StructurePostProcessor;
+use DMdev\FixTailorImport\Services\SlugFixer;
+use DMdev\FixTailorImport\Services\StructurePostProcessor;
 
 /**
  * RepairNulls — одна команда для исправления уже импортированных записей.

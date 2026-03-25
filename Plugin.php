@@ -1,13 +1,13 @@
-<?php namespace Dmdev\FixTailorImport;
+<?php namespace DMdev\FixTailorImport;
 
 use DB;
 use System\Classes\PluginBase;
 use Tailor\Models\EntryRecord;
-use Dmdev\FixTailorImport\Models\FixedRecordImport;
-use Dmdev\FixTailorImport\Services\SlugFixer;
+use DMdev\FixTailorImport\Models\FixedRecordImport;
+use DMdev\FixTailorImport\Services\SlugFixer;
 
 /**
- * Plugin registration file for Dmdev.FixTailorImport
+ * Plugin registration file for DMdev.FixTailorImport
  *
  * Fixes slug generation and structure parent assignment during Tailor CSV imports.
  * Works without modifying core, modules/* or vendor/*.
@@ -19,7 +19,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'Fix Tailor Import',
             'description' => 'Fixes slug auto-generation and structure tree rebuilding for Tailor CSV imports.',
-            'author'      => 'Dmdev',
+            'author'      => 'DMdev',
             'icon'        => 'icon-wrench',
         ];
     }
@@ -38,17 +38,17 @@ class Plugin extends PluginBase
 
         $this->registerConsoleCommand(
             'tailor.fix-nulls',
-            \Dmdev\FixTailorImport\Console\RepairNulls::class
+            \DMdev\FixTailorImport\Console\RepairNulls::class
         );
 
         $this->registerConsoleCommand(
             'tailor.fix-structure',
-            \Dmdev\FixTailorImport\Console\RepairStructure::class
+            \DMdev\FixTailorImport\Console\RepairStructure::class
         );
 
         $this->registerConsoleCommand(
             'tailor.fix-slugs',
-            \Dmdev\FixTailorImport\Console\RepairSlugs::class
+            \DMdev\FixTailorImport\Console\RepairSlugs::class
         );
     }
 

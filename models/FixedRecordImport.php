@@ -1,4 +1,4 @@
-<?php namespace Dmdev\FixTailorImport\Models;
+<?php namespace DMdev\FixTailorImport\Models;
 
 use Site;
 use Tailor\Models\RecordImport;

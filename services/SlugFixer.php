@@ -1,4 +1,4 @@
-<?php namespace Dmdev\FixTailorImport\Services;
+<?php namespace DMdev\FixTailorImport\Services;
 
 use Str;
 use Tailor\Models\EntryRecord;
