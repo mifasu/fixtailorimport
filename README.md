@@ -9,6 +9,17 @@
 - Строки без `id` в CSV создаются (а не пропускаются)
 - `nest_left`, `nest_right`, `nest_depth` заполняются при создании записи в structure-секции
 - `fullslug` строится автоматически после каждого сохранения
+- `update_existing` в импорте Tailor не теряется после расширения блюпринта, поэтому обновление записей по `id` снова работает
+
+---
+
+## Changelog
+
+### v1.0.1
+
+- Исправлен баг импорта Tailor, при котором `update_existing` молча игнорировался после `extendWithBlueprint()`
+- Возвращена работа обновления существующих записей по `id`
+- Обновлены релизные заметки для публикации плагина в OctoberCMS
 
 ---
 
@@ -96,6 +107,17 @@ php artisan tailor:fix-slugs
 - `App::bind()` — подмена `RecordImport` нашей версией (разрешает авто-ID)
 - `EntryRecord::extend()` — хуки `model.beforeValidate` (slug), `model.beforeCreate` (nest), `model.afterSave` (fullslug)
 - `resetTreeOrphans()` + `resetTreeNesting()` — штатный NestedTree OctoberCMS
+
+---
+
+## Публикация в OctoberCMS
+
+Для публикации и обновления плагина используйте версию из `updates/version.yaml`.
+После внесения изменений в код и релизные заметки выполните миграции:
+
+```bash
+php artisan october:migrate
+```
 
 ---
 

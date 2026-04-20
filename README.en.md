@@ -9,6 +9,17 @@ auto-assigns IDs, generates readable slugs from title, corrects nested-tree posi
 - CSV rows without an `id` column are created (not skipped)
 - `nest_left`, `nest_right`, `nest_depth` are populated when a structure-section entry is created via import
 - `fullslug` is rebuilt automatically after every save
+- `update_existing` in Tailor import is preserved after blueprint extension, so updating existing records by `id` works again
+
+---
+
+## Changelog
+
+### v1.0.1
+
+- Fixed the Tailor import bug where `update_existing` was silently ignored after `extendWithBlueprint()`
+- Restored updating existing records by `id`
+- Updated release notes for OctoberCMS publication
 
 ---
 
@@ -107,6 +118,17 @@ The plugin never modifies core, `modules/*`, or `vendor/*`. It works through:
   - `model.beforeCreate` — nest fields fix for structure sections
   - `model.afterSave` — fullslug rebuild
 - `resetTreeOrphans()` + `resetTreeNesting()` — OctoberCMS built-in NestedTree methods.
+
+---
+
+## Publishing to OctoberCMS
+
+Use the version defined in `updates/version.yaml` when publishing or updating the plugin.
+After code and release-note changes, run migrations:
+
+```bash
+php artisan october:migrate
+```
 
 ---
 
