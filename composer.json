@@ -12,15 +12,18 @@
     ],
     "require": {
         "php": "^8.2",
-        "composer/installers": "~1.0",
+        "composer/installers": "^1.0 || ^2.0",
         "october/rain": ">=4.0"
     },
     "autoload": {
         "psr-4": {
-            "DMdev\\FixTailorImport\\": ""
+            "DMdev\\FixTailorImport\\": "",
+            "DMdev\\FixTailorImport\\Models\\": "models/",
+            "DMdev\\FixTailorImport\\Services\\": "services/",
+            "DMdev\\FixTailorImport\\Console\\": "console/"
         }
     },
     "extra": {
-        "installer-name": "dmdev/fixtailorimport"
+        "installer-name": "fixtailorimport"
     }
 }
